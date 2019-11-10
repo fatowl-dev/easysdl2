@@ -10,7 +10,7 @@
 
 ## 設定方法(Mac)
 
-- sdl2のインストール
+- sdl2のインストール(homebrewがインストールされていること)
 ```terminal
 brew install sdl2 sdl2_image sdl2_mixer sdl2_ttf
 ```

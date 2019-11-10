@@ -12,7 +12,7 @@ from easysdl2 import *
 
 WIDTH = 640
 HEIGHT = 480
-MAX_ACTORS = 500
+MAX_ACTORS = 1000
 
 actors = []
 act_tex = None
@@ -71,7 +71,7 @@ act_tex.set_blend_mode(SDL_BLENDMODE_ADD)
 
 while process_events():
     if check_key(SDLK_ESCAPE):
-        break;
+        break
 
     if len(actors) < MAX_ACTORS:
         create_actor()

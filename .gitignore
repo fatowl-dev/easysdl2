@@ -3,9 +3,11 @@ __pycache__
 *.lock
 .venv
 .idea
+.DS_Store
 /tests/images/*
 /tests/musics/*
 /tests/sounds/*
 /tests/fonts/*
+!/tests/images/test.png
 !/tests/images/sprite.json
 !/tests/images/sprite.png
