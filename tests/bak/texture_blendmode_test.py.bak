@@ -1,0 +1,45 @@
+#coding: utf-8
+
+import os
+import sys
+path = os.path.join(os.path.dirname(__file__), '../')
+sys.path.append(path)
+
+import easysdl2 as esdl
+from sdl2 import *
+
+esdl.init()
+esdl.create_window()
+texture = esdl.Texture("./images/test.png")
+
+xlst = [0 for i in range(20)]
+ylst = [0 for i in range(20)]
+
+while esdl.process_events():
+    for i in range(19, 0, -1):
+        xlst[i] = xlst[i-1]
+        ylst[i] = ylst[i-1]
+    if esdl.check_key(SDLK_LEFT):
+        xlst[0] -= 10 
+    elif esdl.check_key(SDLK_RIGHT):
+        xlst[0] += 10
+    if esdl.check_key(SDLK_UP):
+        ylst[0] -= 10
+    elif esdl.check_key(SDLK_DOWN):
+        ylst[0] += 10
+
+    esdl.clear_screen()
+    texture.set_blend(mode=esdl.Texture.BLEND_ALPHA)
+    texture.draw(0, 0)
+    texture.set_blend(mode=esdl.Texture.BLEND_ALPHA, alpha=127, color=(255,127,255))
+    texture.draw(0, 100)
+    texture.set_blend(mode=esdl.Texture.BLEND_ADD, color=(127,127,255))
+    alpha = 255
+    for i in range(20):
+        texture.set_blend_alpha(alpha)
+        texture.draw(xlst[i], ylst[i])
+        texture.draw(xlst[i], ylst[i])
+        alpha -= 10 
+
+    esdl.present()
+esdl.quit()

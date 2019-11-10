@@ -1,0 +1,11 @@
+__pycache__
+*.log
+*.lock
+.venv
+.idea
+/tests/images/*
+/tests/musics/*
+/tests/sounds/*
+/tests/fonts/*
+!/tests/images/sprite.json
+!/tests/images/sprite.png

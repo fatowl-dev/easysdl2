@@ -1,0 +1,18 @@
+#coding: utf-8
+
+import os
+import sys
+path = os.path.join(os.path.dirname(__file__), '../')
+sys.path.append(path)
+
+import easysdl2 as esdl
+
+esdl.init()
+esdl.create_window()
+texture = esdl.Texture("./images/test.png")
+
+while esdl.process_events():
+    esdl.clear_screen()
+    texture.draw(0, 0)
+    esdl.present()
+esdl.quit()
