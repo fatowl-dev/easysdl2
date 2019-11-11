@@ -14,3 +14,4 @@ from .joystick import *
 from .music import *
 from .sound import *
 from .texture import *
+from .sprite_sheet import *

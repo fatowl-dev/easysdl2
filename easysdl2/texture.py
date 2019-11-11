@@ -351,6 +351,9 @@ class Texture:
         if not self.set_blend_color(red, green, blue): ret = False
         return ret
 
+    def get_texture(self):
+        return self.__texture
+
 
 class TextureAtlasFrame:
     """
