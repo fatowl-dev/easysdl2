@@ -14,7 +14,7 @@ from . import _common as g
 from . import log
 
 
-class Rect():
+class Rect:
     """
     長方形のクラス。主にコピー元、コピー先の指定に使う。
     """
@@ -35,7 +35,7 @@ class Rect():
         self.h = h
 
 
-class Texture():
+class Texture:
     """
     画像ファイルからテクスチャを読み込み、表示するためのクラス
     """
@@ -352,7 +352,7 @@ class Texture():
         return ret
 
 
-class TextureAtlasFrame():
+class TextureAtlasFrame:
     """
     テクスチャアトラスの1フレームの情報を格納するクラス
     """
@@ -369,7 +369,7 @@ class TextureAtlasFrame():
         self.pivotY = 0
 
 
-class TextureAtlas():
+class TextureAtlas:
     """
     jsonファイルからテクスチャアトラスの情報を読み取り、表示するためのクラス。
     TexturePackerのjson(array)と同じ形式

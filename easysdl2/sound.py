@@ -6,7 +6,7 @@ from . import log
 from .functions import *
 
 
-class Sound():
+class Sound:
     """
     サウンド（SE)を扱うクラス
     
@@ -83,7 +83,7 @@ class Sound():
             log.write("play() in Sound object failed. error={}".format(Mix_GetError()))
         return int(res)
 
-    def set_volume(volume):
+    def set_volume(self, volume):
         """
         サウンド再生時のボリュームを設定する
 

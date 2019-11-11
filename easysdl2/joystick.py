@@ -8,7 +8,7 @@ from sdl2 import *
 from . import log
 
 
-class Joystick():
+class Joystick:
     """
     ジョイスティックを扱うクラス
     """

@@ -104,7 +104,7 @@ class Music():
 
         res = Mix_PlayMusic(self.__music, loops)
         if res == -1:
-            write_error("play() in Music object failed. error={}".format(Mix_GetError()))
+            log.write("play() in Music object failed. error={}".format(Mix_GetError()))
             return False
 
         return True

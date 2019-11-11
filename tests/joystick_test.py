@@ -48,6 +48,8 @@ while process_events():
     elif y_axis > 0:
         y += 1
 
+    print(f'x={x_axis} y={y_axis}')
+
     clear_screen()
 
     if joystick.get_button(0):

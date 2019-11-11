@@ -9,7 +9,7 @@ from .functions import *
 from .texture import *
 
 
-class Font():
+class Font:
     """
     フォントを扱うクラス
     """
